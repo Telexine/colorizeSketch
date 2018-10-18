@@ -1,6 +1,6 @@
 from PIL import Image
 import glob
-import sys
+import sys,os
 
 
 
@@ -26,14 +26,25 @@ def merge_images(file1, file2):
     result.paste(im=image2, box=(width1, 0))
     return result
 
+def whitelist():
+    whitelst = set()
 
-
+    for filename in glob.glob('dataset_onselected/*.jpg'):
+        d = filename.replace("dataset_onselected\\m_","")
+        whitelst.add(d.replace(".jpg",""))
+    return whitelst
 
 O_image_list = []
 g_image_list = []
 c=1
+wl = whitelist()
+print(wl)
 for filename in glob.glob('ori/*.jpg'): #assuming gif
     O_image_list.append(filename)
+    if bool(set(str(c)) & set(wl))==False:
+        c=c+1
+        continue
+
     new_im = merge_images(filename,filename.replace("ori\\","g\\"))
     new_im.save("output/m_{0:000}.jpg".format(c))
     c=c+1
