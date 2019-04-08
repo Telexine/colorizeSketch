@@ -8,7 +8,8 @@ original         alpha 1.0 (opaqe bg)<br>
 predict result   alpha 0.8 <br>
 <br><br>
 
-
+### modified based from 
+https://github.com/eriklindernoren/Keras-GAN
 
 ### 128x128 image size dataset prediction result 
 
@@ -22,3 +23,4 @@ predict result   alpha 0.8 <br>
  stretch prediction result to original size then merge two layer.
  *The result might have some noise and artifact from it 
 more detail on merg/dockerize is in https://github.com/Telexine/KubeKeras
+
