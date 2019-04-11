@@ -1,6 +1,13 @@
 # colorizeSketch
 using keras tensorflow to colorize the sketch Image to colored Image
 
+### Pre-train Model
+
+Download here 
+https://drive.google.com/file/d/1CU-I1JeJo7bgcH8PKswpZ4Ymc3gdGOoy/view?usp=sharing
+
+Create Folder name models in root and put all file in to use Predict.ipynb
+
 ## Result
 Testing By image that not in dataset <br>
 merg by <br>
