@@ -1,3 +1,4 @@
+import imageio
 import scipy
 from glob import glob
 import numpy as np
@@ -74,4 +75,4 @@ class DataLoader():
         return img[np.newaxis, :, :, :]
 
     def imread(self, path):
-        return scipy.misc.imread(path, mode='RGB').astype(np.float)
+        return imageio.imread(path).astype(np.float)
